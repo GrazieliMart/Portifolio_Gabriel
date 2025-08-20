@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <link href="https://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>Gabriel Leite Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>.bg-vscode-blue {
+    background-color: #d5c8be !important;
+} #gallery::-webkit-scrollbar {
+    display: none;
+  }
+  #gallery {
+    -ms-overflow-style: none; /* IE e Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  .h-48 {
+    height: 20rem !important;
+}
+   
+    html {
+  scroll-behavior: smooth;
+}
+
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    body {
+      background-color: var(--vscode-bg);
+      color: var(--vscode-text);
+    }body {
+  font-family: 'Montserrat', sans-serif; /* Set Montserrat as the default font */
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+  nav a {
+    position: relative;
+  }
+
+  /* Style for social icons */
+  .social-icons a {
+
+    display: inline-block;
+    padding: 1px 6px;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    transition: background-color 0.2s, color 0.2s;
+  }#social a {
+   transition: 0.2s;
+   
+  }
+  /* Estilo para a barra de rolagem */
+::-webkit-scrollbar {
+  width: 10px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff; /* Cor de fundo da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0171d3; /* Cor do 'thumb' (a parte que desliza) */
+  border-radius: 10px; /* Bordas arredondadas no thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #023561; /* Cor do thumb quando o mouse está sobre ele */
+}
+/* Altera a cor de fundo da seleção de texto */
+::selection {
+    background-color: #0c0b0b;
+    color: #d5c8be;
+}
+
+/* Para navegadores Webkit (Chrome, Safari) */
+::-webkit-selection {
+  background-color: #0c0b0b;
+  color: #d5c8be;
+}
+#social a{
+  color: #000;
+}
+
+#social a:hover {
+   transition: 0.2s;
+    color: #0171d3;
+  }
+  .social-icons a:hover {
+    background-color:#0171d3;
+    color: rgb(255, 255, 255);
+  }
+/* Impede o clique direito nas imagens */
+
+
+/* Impede o "drag and drop" nas imagens */
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+/* Desabilita a seleção de texto e imagens */
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+  .social-icons i {
+    font-size:12px;
+  }
+    .typewriter {
+  font-family: 'Cascadia Code', monospace;
+}
+header img{
+    height: 70px;
+  
+}
+    .typewriter {
+    
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid var(--vscode-text);
+      animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { border-color: var(--vscode-text); }
+      50% { border-color: transparent; }
+    }
+
+    .nav-link {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--vscode-text);
+    transition: color 0.3s ease;
+}
+    .nav-link:hover {
+   color:#0171d3;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .fullscreen {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 90vw;
+      max-height: 90vh;
+      z-index: 50;
+      transition: transform 0.5s ease;
+    }
+.bg-vscode-blue {
+    background-color: #161616 !important;
+}
+    .text-vscode-purple {
+      color: var(--vscode-purple);
+    }
+    .text-vscode-comment {
+      color: var(--vscode-comment);
+    }
+    .fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+img:hover {
+  filter: brightness(0.3);
+
+  transition: 0.2s;
+}
+ #backToTop {
+  background-color: #0171d3;
+  color: white;
+} #backToTop:hover {
+  background-color: #023561;
+  color: white;
+}
+.section-container {
+    display: flex
+;
+    justify-content: center;
+    align-items: stretch;
+    padding: 20px;
+    background: #fff;
+}
+
+    .education {
+      background: #0171d3;
+      color: #fff;
+      padding: 20px;
+      margin-right: 100px;
+      width: 20%;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .education h2 {
+      background: #0a3464;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    .education h3 {
+      color: #fff;
+      font-size: 16px;
+      margin-top: 20px;
+      border: 1px solid #fff;
+      border-radius: 15px;
+      padding: 3px 10px;
+      display: inline-block;
+    }
+
+    .education p {
+      margin: 5px 0;
+    }
+
+    .skills {
+      width: 40%;
+      text-align: center;
+    }
+
+    .skills h2 {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      background: #0a3464;
+      color: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .icons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0px;
+      justify-items: center;
+    }
+
+    .icons div {
+      margin-right: -50px;
+      margin-left: -50px;
+      text-align: center;
+    }
+
+    .icons img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto  0px;
+    }
+      .icons p{
+     margin-bottom: 5px;
+     font-size: 14px;
+     color: #0171d3;
+    }
+.icons img:hover + p{
+  color: #000;
+}
+    .soft-skills {
+      background: #0171d3;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 15px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .soft-skills span:first-child {
+      background: #0a3464;
+      padding: 5px 15px;
+      border-radius: 10px;
+    }.skills #p-2 {
+      background-color: #dfdfdf;
+      padding: 20px;
+      border-radius: 20px;
+    }
+.text-2xl {
+    font-size: 1.5rem;
+    line-height: 3.6rem !important;
+}
+@media screen and (max-width: 768px) {
+.education {
+    background: #0171d3;
+    color: #fff;
+    padding: 20px;
+    margin-right: 100px;
+    width: 100% !important;
+    border-radius: 10px;
+    position: relative;
+}.section-container {
+    display: flow-root;
+    justify-content: center;
+    align-items: stretch;
+    padding: 20px;
+    background: #fff;
+}.skills {
+    width: 100%;
+    text-align: center;
+}
+.skills #p-2 {
+    margin-top: 20px;
+    background-color: #dfdfdf;
+    padding: 20px;
+    border-radius: 20px;
+}
+#about #video {
+height: 200px !important;
+}
+#about p{
+  font-size: 13px;
+}.soft-skills {
+    width: 100%;
+    background: #0171d3;
+    color: #fff;
+    display: inline-grid
+;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 13px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.h-\[400px\] {
+    height: 600px !important;
+}
+}
+    #about h2 {
+      font-size: 40px;
+    }
+    #about h3 {
+      font-size: 32px;
+    }
+    #about p {
+      font-size: 25px;
+    }
+
+    /* Tablets (1024px ou menos) */
+    @media screen and (max-width: 1024px) {
+      #about h2 {
+        font-size: 32px;
+      }
+      #about h3 {
+        font-size: 28px;
+      }
+      #about p {
+        font-size: 13px;
+      }
+    }
+
+    /* Mobile (768px ou menos) */
+    @media screen and (max-width: 768px) {
+      #about h2 {
+        font-size: 24px;
+      }
+      #about h3 {
+        font-size: 20px;
+      }
+      #about p {
+        font-size: 13px;
+      }
+    }
+
+    /* Mobile pequeno (480px ou menos) */
+    @media screen and (max-width: 480px) {
+      #about h2 {
+        font-size: 20px;
+      }
+      #about h3 {
+        font-size: 18px;
+      }
+      #about p {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body id="top" >
+
+    <header id="navbar" class="flex justify-center items-center px-6 py-4 bg-[#fff] shadow-md transition-all duration-300" style="gap: 100px;">
+  <img id="logo" src="logo.png" alt="Logo" class="h-16 transition-all duration-300"/>
+
+  <!-- Menu de navegação -->
+  <nav class="flex space-x-6 hidden md:flex">
+    <a href="#about" class="nav-link">Sobre</a>
+    <a href="#projects" class="nav-link">Projetos</a>
+    <a href="#contact" class="nav-link">Contato</a>
+  </nav>
+
+  <!-- Redes sociais -->
+  <div class="flex items-center space-x-4 social-icons hidden md:flex">
+    <a href="https://www.instagram.com/gabriel_leite333/"><i class="bi bi-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/gabriel-leite-b208281b9/"><i class="bi bi-linkedin"></i></a>
+   
+  </div>
+
+  <!-- Bandeiras -->
+  <div class="flex items-center space-x-4 md:flex" id="flags">
+    <a href="index-br.html"><img src="br.png" class="h-5 ml-4 cursor-pointer" alt="Português" /></a>
+    <a href="index.html"><img src="ie.png" class="h-5 cursor-pointer " alt="English"/></a>
+  </div>
+</header>
+
+<script>
+  const logo = document.getElementById("logo");
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      logo.classList.add("h-10");
+      logo.classList.remove("h-16");
+      navbar.classList.add("py-2");
+      navbar.classList.remove("py-4");
+    } else {
+      logo.classList.add("h-16");
+      logo.classList.remove("h-10");
+      navbar.classList.add("py-4");
+      navbar.classList.remove("py-2");
+    }
+  });
+</script>
+
+      
+<!-- Back to Top Button -->
+<a href="#top" id="backToTop" class="fixed bottom-6 right-6 text-white rounded-full p-3 shadow-lg transition-colors">
+    ↑
+  </a>
+  
+<!-- HERO -->
+<section class="relative flex items-center justify-center min-h-[100vh] w-full overflow-hidden" id="about">
+  <!-- Vídeo em loop no fundo -->
+  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+    <source src="videoo.webm" type="video/mp4">
+    Seu navegador não suporta vídeo HTML5.
+  </video>
+
+  <!-- Conteúdo acima do vídeo -->
+  <div class="relative z-[5] grid grid-cols-1 md:grid-cols-2 items-center w-full max-w-7xl px-6 gap-8">
+    
+    <!-- Vídeo lateral (extra) -->
+    <div class="flex justify-center items-center">
+      <video autoplay muted loop playsinline class="rounded-2xl shadow-lg w-full max-w-md">
+        <source src="video.mp4" type="video/mp4" id="video">
+        Seu navegador não suporta vídeo HTML5.
+      </video>
+    </div>
+
+    <!-- Texto à direita -->
+    <div class="text-white text-center md:text-left">
+      <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
+       Olá, sou o Gabriel! <br>
+   
+      </h1>
+      <!-- Texto com efeito de digitar e apagar -->
+      <h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mt-4">
+        <span style="color: #0171d3;" id="typing"></span><span class="border-r-2 border-white animate-pulse ml-1"></span>
+      </h2>
+
+     <p class="text-base md:text-lg lg:text-xl leading-relaxed mt-6">
+  Trabalho na área de marketing digital há mais de cinco anos. Tenho muita experiência trabalhando individualmente e como membro de uma equipe.
+  <br><br>
+  Meu princípio no trabalho é a exposição, porque o núcleo do marketing digital é tudo sobre como aumentar a visibilidade do produto promovido.
+</p>
+
+       <a href="GABRIEL LEITE I CURRICULUM.pdf" download class="mt-4 inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+  Baixe meu CV
+</a>
+    </div>
+  </div>
+</section>
+
+<!-- SCRIPT TYPING EFFECT -->
+<script>
+const texts = [
+  "Profissional de Marketing Digital",
+  "Analista de Dados",
+  "Comprador de Mídia Profissional",
+  "Gerente de Marketing Digital",
+  "Especialista em Marketing Meta",
+  "Estagiário de Marketing Digital"
+];
+
+  let count = 0;
+  let index = 0;
+  let currentText = "";
+  let letter = "";
+  const typingElement = document.getElementById("typing");
+
+  function type() {
+    if (count === texts.length) {
+      count = 0;
+    }
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
+
+    typingElement.textContent = letter;
+
+    if (letter.length === currentText.length) {
+      setTimeout(() => {
+        erase();
+      }, 2000); // espera 2s antes de apagar
+    } else {
+      setTimeout(type, 100);
+    }
+  }
+
+  function erase() {
+    letter = currentText.slice(0, --index);
+    typingElement.textContent = letter;
+
+    if (letter.length === 0) {
+      count++;
+      index = 0;
+      setTimeout(type, 500);
+    } else {
+      setTimeout(erase, 50);
+    }
+  }
+
+  type();
+</script>
+
+
+ 
+  <div class="section-container">
+    <!-- Coluna Esquerda -->
+<div class="education">
+  <h2>FORMAÇÃO</h2>
+  
+  <p>Bacharelado em Línguas
+  e Literatura
+  Universidade de São Paulo <br><b>USP</b><br>2021 – 2027 | Média: 3,40</p>
+  
+  <h3>IDIOMAS</h3>
+  <p>Português <b>NATIVO</b><br>
+     Alemão <b>INTERMEDIÁRIO</b><br>
+     Inglês <b>AVANÇADO</b><br>
+     Espanhol <b>INTERMEDIÁRIO</b></p>
+</div>
+
+    
+    <!-- Coluna Direita -->
+  <div class="skills">
+  <p id="p-2">
+    Capacidade de entregar resultados atingindo metas em múltiplos <b>KPIs.</b>
+    <br>
+    Experiência em plataformas como
+    <b>Facebook Ads, Facebook CRM, Tableau, Salesforce CRM, Power BI, Google Ads,</b> entre vários outros <b>CRMs</b>.
+  </p>
+  <br>
+  <div class="icons">
+    <div>
+      <img src="icons (1).png" alt="Photoshop">
+      <p>Meta Ads</p>
+    </div>
+    <div>
+      <img src="icons (2).png" alt="Illustrator">
+      <p>Google Ads</p>
+    </div>
+    <div>
+      <img src="icons (3).png" alt="Canva">
+      <p>Pinterest Ads</p>
+    </div>
+    <div>
+      <img src="icons (4).png" alt="Procreate">
+      <p>TikTok Ads</p>
+    </div>
+    <div style="margin-right: -20%;">
+      <img src="icons (5).png" alt="Premiere Pro">
+      <p>WhatsApp Ads</p>
+    </div>
+    <div style="margin-left: -20%;">
+      <img src="icons (6).png" alt="Premiere Pro">
+      <p>Instagram Ads</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <!-- Soft Skills -->
+<div class="soft-skills">
+  <span>HABILIDADES INTERPESSOAIS:</span>
+  <span>Trabalho em equipe</span>
+  <span>Adaptabilidade</span>
+  <span>Comunicação</span>
+  <span>Criatividade</span>
+</div>
+
+<section class="bg-vscode-blue text-white py-16 px-5 sm:px-5 text-center" id="about">
+  <div class="max-w-7xl mx-auto" data-bs-aos="fade-up" id="projects">
+
+    <h3 class="text-2xl font-bold mb-6 text-white">Experiência Profissional</h3>
+
+    <!-- Primeiro projeto -->
+    <div class="relative flex flex-col mb-8" data-bs-aos="fade-up">
+      <img src="gghandmade.png" class="h-[400px] sm:h-[700px] w-full object-cover rounded shadow-lg mb-6 filter brightness-50" />
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-t from-black/70 via-black/40 to-transparent text-white rounded">
+        <span style="background-color: #0171d3;padding: 10px; border-radius: 20px;">2020-2022</span>
+        <br>
+        <h2 class="text-2xl font-bold mb-4">GGHANDMADE</h2>
+        <p class="max-w-2xl" >
+          Projeto Autônomo de Vendas de Artes Decorativas via
+          Mensagens do WhatsApp por meio de Facebook Ads
+        </p>
+      </div>
+    </div>
+
+    <!-- Projeto com vídeo -->
+    <div class="relative flex flex-col mb-8" data-bs-aos="fade-up">
+      <img src="atento.jpg" class="h-[400px] sm:h-[700px] w-full object-cover rounded shadow-lg mb-6 filter brightness-50" />
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-t from-black/70 via-black/40 to-transparent text-white rounded">
+        <span style="background-color: #0171d3;padding: 10px; border-radius: 20px;">2022 (JUN)-2023 (OUT)</span>
+        <br>
+        <h2 class="text-2xl font-bold mb-4" >Atento | Meta ADS / Produto Facebook</h2>
+        <p><b>Estagiário de Marketing Digital - Especialista em Marketing Meta</b></p><br>
+        <p class="max-w-2xl" >
+          Orientar anunciantes META em estratégias de marketing,
+          distribuição de orçamento e estratégias de escalonamento
+          de orçamento, bem como expansão de negócios.
+          <br>
+          Realocar recursos e desenvolver estruturas mais
+          sustentáveis ou lucrativas dentro das plataformas de anúncios
+          META, comportamento em redes sociais e estratégias
+          para utilizar o algoritmo da plataforma de anúncios META.
+        </p>
+      </div>
+    </div>
+
+    <div class="relative flex flex-col mb-8" data-bs-aos="fade-up">
+      <img src="gg.png" class="h-[400px] sm:h-[700px] w-full object-cover rounded shadow-lg mb-6 filter brightness-50" />
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-t from-black/70 via-black/40 to-transparent text-white rounded">
+        <span style="background-color: #0171d3;padding: 10px; border-radius: 20px;">2024 (Março) - ATUAL</span>
+        <br>
+        <h2 class="text-2xl font-bold mb-4" >GG Digital | Comprador Profissional de Mídia</h2>
+        <p><b>Gerente de Marketing Digital</b></p><br>
+        <p class="max-w-2xl" >
+          Responsável pela compra de mídia em Google Ads,
+          Pinterest Ads, Meta Ads, TikTok Ads,
+          lojas Shopee e Shopify, gerenciando todos
+          os orçamentos de marketing dos clientes.
+        </p>
+      </div>
+    </div>
+
+    <!-- Quarto projeto -->
+
+    <h3 class="text-2xl font-bold mb-6 text-white">
+      Para ver mais projetos, visite o site da minha agência: 
+      <a href="https://marketinggdigital.com/" style="color: #4baeff; text-decoration: underline;">marketinggdigital.com</a>
+    </h3>
+
+  </div>
+</section>
+
+
+  
+
+<script>// Desativa o clique direito na página
+    document.addEventListener('contextmenu', function (event) {
+      event.preventDefault();
+    });
+    </script>  
+  
+  
+
+
+  <!-- FOOTER -->
+  <footer class="bg-[#fff] text-white py-8 text-center" id="contact">
+    <h4 class="text-xl font-semibold" style="color: #0c0b0b;">Entre em contato</h4>
+    <br>
+    
+    <!-- Imagem centralizada com border-radius de 50% -->
+    <img src="me.jpeg" class="mx-auto rounded-full w-24 h-24 object-cover">
+  <br>
+    <p class="mb-4" style="color: #0171d3;">gabrielleite33@usp.br</p>
+    
+    <!-- Links sociais -->
+    <div class="flex justify-center space-x-4" id="social">
+      <a href="https://www.instagram.com/gabriel_leite333/"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/gabriel-leite-b208281b9/"><i class="bi bi-linkedin"></i></a>
+
+    </div> 
+  
+    <!-- Logo -->
+    <div class="flex justify-center space-x-4">
+      <img src="logo.png" alt="" style="margin-left: 10px;">
+    </div> 
+  </footer>
+  
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init(); // Inicializa o AOS
+</script>
+
+</body>
+</html>
