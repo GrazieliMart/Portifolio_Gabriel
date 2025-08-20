@@ -305,11 +305,99 @@ img:hover {
       background-color: #dfdfdf;
       padding: 20px;
       border-radius: 20px;
-    }
+    }    .carousel-text h2 {
+    font-size: 32px; /* Tamanho maior */
+    font-weight: bold; /* Negrito */
+    margin-bottom: 15px;
+  }
+
+  .carousel-text p {
+    font-size: 18px; /* Texto normal */
+    line-height: 1.5;
+  } 
+  .carousel-dots ul{
+    list-style: circle !important;
+  }
+  .container-display{
+display: flex; justify-content: center; padding: 30px;
+  }
+.carousel-container {
+    display: flex;
+    flex-direction: row;
+    width: 1300px;
+    height: 600px;
+    border-radius: 20px;
+    border: 1px solid #cccccc00;
+    overflow: hidden;
+    position: relative;
+}
+  .carousel-image {
+    width: 700px;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+  .carousel-text {
+    width: 50%;
+    padding: 30px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .carousel-controls button {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+    .carousel-controls button:hover {
+    color: #0171d3;
+  }
+  
 .text-2xl {
     font-size: 1.5rem;
     line-height: 3.6rem !important;
 }@media screen and (max-width: 768px) {
+  .carousel-container {
+    display: grid
+;
+    flex-direction: row;
+    width: 100%;
+    height: FIT-CONTENT;
+    border-radius: 20px;
+    border: 1px solid #cccccc00;
+    overflow: hidden;
+    position: relative;
+}    .carousel-text {
+        width: 100%;
+        padding: 30px;
+        background-color: #f5f5f5;
+        display: flex
+;
+        flex-direction: column;
+        HEIGHT: 700PX;
+        justify-content: center;
+        transition: opacity 0.5s ease-in-out;
+    }.carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 80px;
+    display: flex
+;
+    gap: 10px;
+}
+.carousel-dots{
+  display: none;
+}
 .education {
     background: #0171d3;
     color: #fff;
@@ -411,6 +499,7 @@ height: 200px !important;
         font-size: 13px;
       }
     }
+ 
   </style>
 </head>
 <body id="top" >
@@ -606,11 +695,11 @@ Google Ads,</b> among various other
         </div>
         <div >
           <img src="icons (5).png" alt="Premiere Pro">
-         <p>WhatsApp Ads</p>
+         <p>Linkedin Ads</p>
         </div>
           <div >
           <img src="icons (6).png" alt="Premiere Pro">
-         <p>Instagram Ads</p>
+         <p>Email Marketing</p>
         </div>
       </div>
     </div>
@@ -624,6 +713,165 @@ Google Ads,</b> among various other
     <span>Communication</span>
     <span>Creativity</span>
   </div>
+     
+  
+<div class="align-h3" style="display: flex; justify-content: center; padding-top: 50px;">
+  <h3 class="text-2xl font-bold mb-6 text-black">My Projects</h3>
+</div>
+
+<div class="container-display" >
+  <div class="carousel-container">
+    <img src="https://via.placeholder.com/400x400?text=Imagem+1" class="carousel-image" id="carouselImage">
+    <div class="carousel-text" id="carouselText">
+      <h2>Título 1</h2>
+      <p>Texto da primeira imagem. Aqui você pode colocar qualquer informação relacionada à imagem.</p>
+    </div>
+
+    <div class="carousel-controls">
+      <button onclick="prevSlide()">Anterior</button>
+      <button onclick="nextSlide()">Próximo</button>
+    </div>
+  </div>
+</div>
+
+<div class="carousel-dots" style="display: flex; justify-content: center; gap: 15px; padding-top: 20px;">
+  <!-- Bolinhas vão ser geradas pelo JS -->
+</div>
+<br><br>
+
+<script>
+const slides = [
+  { 
+    image: 'forja.webp', 
+    thumb: 'irlanda.png', 
+    title: 'Forja Works', 
+    text: '<strong>Internacional project based in Ireland.</strong><br> I do all the digital media strategy on Instagram, I am responsible for paid traffic.',
+    skills: ['Meta Ads','Tiktok Ads', 'Linkedin Ads', 'Pinterest Ads', 'Paid Traffic', 'Instagram Ads', 'SEO', 'Google Ads', 'Social Media Management']
+  },
+  { 
+    image: 'projetos (1).webp', 
+    thumb: 'irlanda.png', 
+    title: 'Studio Forja', 
+    text: '<strong>International studio based in Ireland.</strong><br> I handle all Instagram content strategy, paid campaigns, and oversee social media management for clients.',
+    skills: ['Meta Ads', 'Paid Traffic', 'Instagram Ads', 'SEO', 'Google Ads', 'Social Media Management']
+  },
+  { 
+    image: 'projetos (5).webp', 
+    thumb: 'br.png', 
+    title: 'Programa Raul GIL SBT Shadow Gospel', 
+    text: '<strong>Brazilian TV program promotion.</strong><br> I manage digital strategy, Instagram content, and paid traffic campaigns for the show.',
+    skills: ['Meta Ads', 'Paid Traffic']
+  }, 
+  { 
+    image: 'projetos (4).png', 
+    thumb: 'ie.png', 
+    title: 'Off Grid Energy', 
+    text: '<strong>Irish renewable energy project.</strong><br> Responsible for social media management, paid traffic, and overall digital media strategy.',
+    skills: ['Meta Ads', 'Paid Traffic', 'SEO', 'Social Media Management']
+  },
+  { 
+    image: 'projetos (5).png', 
+    thumb: 'irlanda.png', 
+    title: 'Plastico Company', 
+    text: '<strong>Sustainability project in Ireland.</strong><br> I handle paid campaigns, Instagram and Meta Ads, SEO, and social media strategy.',
+    skills: ['Meta Ads', 'Paid Traffic', 'SEO', 'Social Media Management']
+  },
+  { 
+    image: 'sara pazini.png', 
+    thumb: 'br.png', 
+    title: 'Psicóloga Sara Pazini', 
+    text: '<strong>Brazilian psychologist digital project.</strong><br> I manage Instagram content, paid traffic campaigns, and overall social media strategy.',
+    skills: ['Meta Ads', 'Paid Traffic', 'SEO', 'Social Media Management']
+  },
+  { 
+    image: 'projetos (3).png', 
+    thumb: 'br.png', 
+    title: 'NXTV Provedores', 
+    text: '<strong>Brazilian internet provider project.</strong><br> I oversee digital strategy, paid campaigns, Instagram Ads, and social media management.',
+    skills: ['Meta Ads', 'Paid Traffic', 'SEO', 'Social Media Management']
+  },
+  { 
+    image: 'projetos (2).png', 
+    thumb: 'br.png', 
+    title: 'NETWE Provedor de Internet', 
+    text: '<strong>Internet service project in Brazil.</strong><br> I handle paid campaigns, Instagram Ads, SEO, and manage all digital media channels.',
+    skills: ['Meta Ads', 'Paid Traffic', 'SEO', 'Social Media Management']
+  },
+  { 
+    image: 'projetos (6).webp', 
+    thumb: 'br.png', 
+    title: 'SOPLAY TV Streaming', 
+    text: '<strong>Brazilian streaming platform project.</strong><br> Responsible for digital media strategy, paid traffic, and Instagram Ads management.',
+    skills: ['Meta Ads', 'Paid Traffic', 'SEO', 'Social Media Management']
+  }
+];
+let currentSlide = 0;
+
+const dotsContainer = document.querySelector('.carousel-dots');
+
+// Cria as bolinhas com miniaturas
+slides.forEach((slide, index) => {
+  const dot = document.createElement('img');
+  dot.src = slide.image;
+  dot.style.width = '60px';
+  dot.style.height = '60px';
+  dot.style.borderRadius = '50%';
+  dot.style.cursor = 'pointer';
+  dot.style.border = index === 0 ? '3px solid #0171d3' : '2px solid #ccc';
+  dot.onclick = () => {
+    currentSlide = index;
+    showSlide(currentSlide);
+  };
+  dotsContainer.appendChild(dot);
+});
+
+function updateDots() {
+  const dots = dotsContainer.querySelectorAll('img');
+  dots.forEach((dot, index) => {
+    dot.style.border = index === currentSlide ? '3px solid #0171d3' : '2px solid #ccc';
+  });
+}
+
+function showSlide(index) {
+  const imageEl = document.getElementById('carouselImage');
+  const textEl = document.getElementById('carouselText');
+
+  imageEl.style.opacity = 0;
+  textEl.style.opacity = 0;
+
+  setTimeout(() => {
+    imageEl.src = slides[index].image;
+
+    // Constrói a lista de skills
+    let skillsList = '<ul style="margin-top:10px; padding-left:20px;">';
+    slides[index].skills.forEach(skill => {
+      skillsList += `<li>${skill}</li>`;
+    });
+    skillsList += '</ul>';
+
+    // Adiciona a pequena imagem redonda acima do título
+    const thumbHtml = `<img src="${slides[index].thumb}" style="width:50px; height:50px; border-radius:50%; display:block; margin-bottom:10px;">`;
+
+    textEl.innerHTML = `${thumbHtml}<h2>${slides[index].title}</h2><p>${slides[index].text}</p>${skillsList}`;
+    imageEl.style.opacity = 1;
+    textEl.style.opacity = 1;
+    updateDots();
+  }, 300);
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+showSlide(0);
+</script>
+
+
 
 <section class="bg-vscode-blue text-white py-16 px-5 sm:px-5 text-center" id="about">
   <div class="max-w-7xl mx-auto" data-bs-aos="fade-up" id="projects">
